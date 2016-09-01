@@ -1,0 +1,26 @@
+@import "../neat/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 1;
+$max-width: 1200px;
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+$first-breakpoint-value-min: 400px;
+$first-breakpoint-value-max: 834px;
+
+$second-breakpoint-value-min: 835px;
+$second-breakpoint-value-max: 1099px;
+
+$third-breakpoint-value: 1100px;
+
+// Covers 400-835px wide screen size. 4 column grid
+$medium-screen-up: new-breakpoint(min-width $first-breakpoint-value-min 4);
+
+// Covers 836-1099px wide screen size. 8 column grid
+$large-screen-up: new-breakpoint(min-width $second-breakpoint-value-min 8);
+
+// Covers 1100px and up wide screen size. 12 column grid
+$xl-screen-up: new-breakpoint(min-width $third-breakpoint-value 12);

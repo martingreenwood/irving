@@ -1,0 +1,225 @@
+/*===============================
+=            General            =
+===============================*/
+
+.byline, .updated:not(.published){
+	display: none;
+}
+
+.single .byline, .group-blog .byline {
+	display: inline;
+}
+
+.page-links { 
+	clear: both; 
+}
+
+#primary {
+	background: white;
+}
+
+#content {
+	padding-top: 80px;
+}
+
+.parallax-wrapper  {
+	position: relative;
+
+	&:before, &:after {
+		//content: "";
+		width: 100%;
+		height: 110px;
+		display: block;
+		transform: skew(-2deg) rotate(-2deg);
+		background: white;
+		z-index: -1;
+		position: absolute;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+
+	}
+
+	&:before {
+		//margin-top: -48px;
+		top: -85px;
+	}
+
+	&:after {
+		bottom: -55px;
+		//margin-bottom: -65px;
+	}
+
+	.shape {
+		width: 100%;
+		margin:0 auto;
+
+		&.fixed-bottom {
+			position: absolute;
+			bottom: -30px;
+			overflow: hidden;
+
+			.top {
+				height: 0;
+				border-width: 0 0 44px 100vw;
+				border-style: solid;
+				border-color: transparent white white transparent;
+				box-sizing: border-box;
+			}
+
+			.bottom {
+				height: 20px;
+				background-color: white;
+			}
+		}
+
+		&.fixed-top {
+			position: absolute;
+			top: -30px;
+			overflow: hidden;
+
+			.top {
+				height: 20px;
+				background-color: white;
+			}
+
+			.bottom {
+				height: 0;
+				border-width: 0 0 44px 100vw;
+				border-style: solid;
+				border-color: white transparent transparent white;
+				box-sizing: border-box;
+			}
+		}
+	}
+	/* Support transparent border colors in IE6. */
+	* html .top {
+		filter:chroma(color=#123456);
+		border-top-color:#123456;
+		border-left-color:#123456;
+	}
+}
+
+.parallax-background {
+	height: 500px;
+ 	min-height: 500px;
+	
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+
+.page:not(.home) {
+	background: transparent;
+
+	.entry-content {
+		margin-bottom: 70px;
+
+		h3 {
+			margin: 0;
+			font-size: 20px;
+			font-weight: 100;
+		}
+	}
+
+	#primary {
+		background: transparent;
+	}
+
+	.menu-icon > span {
+		color: black;
+	}
+
+	#nav-icon {
+
+		span {
+			background: black;
+		}
+	}
+
+	.toggled {
+		
+		.menu-icon > span {
+			color: white;
+		}
+
+		#nav-icon {
+
+			span {
+				background: white;
+			}
+		}
+	}
+
+	.site-branding {
+		position: absolute;
+	}
+
+	.page-header, .entry-content {
+		@include media($medium-screen-up) {
+			padding-right: 250px;
+		}
+	}
+
+	.page-header {
+		
+		h1 {
+			font-size: 33px;
+			font-weight: 700;
+			margin: 0 0 10px 0;
+			color: #222;
+		}
+	}
+}
+
+
+.shareme {
+	margin-top: 20px;
+
+	h3.sd-title {
+		color: #333;
+		padding-bottom: 5px;
+	}
+}
+
+/**
+ * 404
+ */
+
+ .error404 {
+
+	.menu-icon > span {
+		color: black;
+	}
+
+	#nav-icon {
+
+		span {
+			background: black;
+		}
+	}
+
+ 	#content {
+		height: 100vh;
+
+		header {
+			h1 {
+				font-size: 33px;
+				font-weight: 700;
+				margin: 0 0 10px 0;
+				color: #222;
+			}
+		}
+
+		.entry-content {
+			margin-bottom: 70px;
+
+			h4 {
+				margin: 0;
+				font-size: 20px;
+				font-weight: 100;
+			}
+		}
+
+ 	}
+ }

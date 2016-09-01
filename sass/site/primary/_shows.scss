@@ -1,0 +1,108 @@
+/*=============================
+=            Shows            =
+=============================*/
+
+.shows {
+
+	.entry-content {
+		margin-bottom: 30px;
+
+		h3 {
+			margin: 0;
+			font-size: 20px;
+			font-weight: 100;
+		}
+	}
+
+	.genres {
+		margin-bottom: 30px;
+
+		.fa {
+			background: #1b1b1b;
+			padding: 5px;
+			border-radius: 50%;
+			width: 26px;
+			text-align: center;
+			color: white;
+		}
+
+		a {
+			padding: 5px 15px;
+			background: #eeeeee;
+			color: #333;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+
+			&.active {
+				background: #333;
+				color: white;
+			}
+		}
+
+	}
+
+	.theshows {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		.show {			
+			margin-bottom: 30px;
+			transition: $base-transition;
+			width: 100%;
+			margin: 0 0 3% 0;
+
+			@include media($medium-screen-up) {
+				width: 31.33%;
+				margin: 0 3% 3% 0;
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+
+			&.hide {
+				opacity: 0.1;
+			}
+
+			a {
+				color: inherit;
+			}
+
+			.btn {
+				background: $brand-primary;
+				padding: 5px 10px;
+				font-size: 14px;
+				margin: 10px 0 0 0;
+				color: white;
+				font-weight: 600;
+
+				.fa {
+					float: right;
+					font-size: 22px;
+				}
+			}
+
+			img {
+				display: block;
+			}
+
+			h2 {
+				margin: 10px 0 0 0;
+				font-weight: 600;
+				color: #333;
+			}
+
+			h4 {
+				font-weight: 300;
+				font-size: 16px;
+				margin: 0;
+			}
+		}
+	}
+}
+

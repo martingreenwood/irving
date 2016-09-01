@@ -1,0 +1,21 @@
+#colophon {
+	background: white;
+	padding: 60px 0;
+	background: #3a3a3a;
+	//margin-top: 30px;
+	color: white;
+
+	p, a {
+		color: white;
+	}
+
+	.site-info {
+		@include two-thirds-nom();
+	}
+	
+	.credit {
+		@include one-third-nom();
+		text-align: right;
+	}
+}
+

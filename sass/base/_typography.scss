@@ -1,0 +1,87 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+@font-face {
+  font-family: 'EuphemiaUCAS';
+  src: url('fonts/Euphemia UCAS Bold 2.6.6.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Euphemia UCAS Bold 2.6.6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Euphemia UCAS Bold 2.6.6.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Euphemia UCAS Bold 2.6.6.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Euphemia UCAS Bold 2.6.6.svg#75983e7c23bc14cb3db2dcfbae4f2d5f') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'EuphemiaUCAS';
+  src: url('fonts/Euphemia UCAS Italic 2.6.6.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Euphemia UCAS Italic 2.6.6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Euphemia UCAS Italic 2.6.6.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Euphemia UCAS Italic 2.6.6.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Euphemia UCAS Italic 2.6.6.svg#640c4cb62fad496aa9796e5f466abd83') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'EuphemiaUCAS';
+  src: url('fonts/Euphemia UCAS Regular 2.6.6.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Euphemia UCAS Regular 2.6.6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Euphemia UCAS Regular 2.6.6.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Euphemia UCAS Regular 2.6.6.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Euphemia UCAS Regular 2.6.6.svg#f132e011c3bbd622278b21c99a20f082') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

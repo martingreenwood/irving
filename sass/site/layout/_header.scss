@@ -1,0 +1,12 @@
+.site-branding {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 56px;
+	height: auto;
+	z-index: 0;
+
+	@include media($medium-screen-up) {
+		width: 177px;
+	}
+}

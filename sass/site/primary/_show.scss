@@ -1,0 +1,258 @@
+/*=============================
+=            Show            =
+=============================*/
+
+.single-shows {
+
+	#content {
+		padding-top: 0;
+	}
+
+	#primary {
+		margin-top: 70px;
+	}
+
+	.entry-sidebar {
+		margin-bottom: 60px;
+		@include one-third-nom();
+
+		aside {
+			margin-bottom: 30px;
+
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.onsale {
+			display: block;
+			border: 2px solid #282780;
+			text-align: center;
+			padding: 7px;
+			margin-bottom: 20px;
+			font-weight: 600;
+			transition: all $base-transition;
+
+			&:hover {
+				color: white;
+				background-color: #282780;
+			}
+		}
+	}
+
+	.entry-content {
+		@include two-thirds-nom();
+		margin-bottom: 60px;
+
+		h2 {
+			margin: 0 0px 10px 0;
+			border-bottom: 3px solid;
+			padding-bottom: 10px;
+			display: inline-block;
+			color: BLACK;
+		}
+
+		h3 {
+			margin: 0;
+			font-size: 20px;
+			font-weight: 100;
+		}
+	}
+
+	.parallax-wrapper {
+		&:before {
+			display: none;
+		}
+	}
+
+	.parallax-background {
+
+		.table {
+			background: rgba(0,0,0,0.6);
+			z-index: -2;
+			position: relative;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 42px;
+			color: white;
+			text-transform: uppercase;
+			line-height: 1.4;
+		}
+
+		h2 {
+			margin: 0;
+			color: #e9e9e9;
+			font-size: 22px;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 22px;
+			color: white;
+			margin-top: 20px;
+		}
+	}
+
+	.gallery {
+		margin: 0 0px 60px 0;
+
+		h2 {
+			margin: 0 0px 60px 0;
+			color: black;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 24px;
+		}
+
+		.tiled-gallery {
+			margin-bottom: 0;
+
+			.gallery-row {
+				display: none;
+
+				&:first-of-type {
+					display: block;
+
+					.gallery-group {
+
+						&:last-of-type {
+							
+							a {							
+							
+								&:after {
+									content: "";
+									position: absolute;
+									background-color: rgba(0,0,0,0.4);
+									height: calc(100% - 4px);
+									width: calc(100% - 4px);
+									z-index: 2;
+									top: 2px;
+									left: 2px;
+									box-sizing: content-box;
+									background-image: url(assets/more.png);
+									background-repeat: no-repeat;
+									background-position: center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#performaces {
+
+		h2 {
+			margin: 0 0px 10px 0;
+			border-bottom: 3px solid;
+			padding-bottom: 10px;
+			display: inline-block;
+			color: black;
+		}
+	}
+
+	.cast-crew {
+		background: #f9f9f9;
+		padding: 60px 0;
+		margin-bottom: 60px;
+
+		.expand-cast {
+			display: inline-block;
+			text-align: center;
+			margin: 20px 0 0 0;
+			border: 1px solid #282780;
+			padding: 5px 10px;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 600;
+
+			&.rotate {
+
+				.fa {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		
+		.cast, .crew {
+			@include one-half-nom;
+			height: 130px;
+			overflow: hidden;
+			position: relative;
+
+			.grad{
+				height: 64px;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+
+				background: rgba(255,255,255,0);
+				background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(249,249,249,1)));
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+				background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+				background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9', GradientType=0 );
+			}
+
+			&.expand {
+				height: auto;
+			}
+
+
+			.title {
+				width: 30%;
+				float: left;	
+			}
+
+			.text {
+				width: 70%;
+				float: left;
+
+				p {
+					margin-bottom: 0;
+
+					span {
+						width: 45%;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	.reviews {
+		background: lighten($brand-primary, 30%);
+		padding: 60px 0;
+
+		.review {
+			width: 80%;
+			float: left;
+			margin-bottom: 30px;
+			text-align: left;
+
+			&:nth-child(2n) {
+				float: right;
+			}
+
+			p {
+				color: white;
+				font-size: 22px;
+				line-height: 1.2;
+				margin-bottom: 10px;
+			}
+
+			small {
+				color: white;
+			}
+		}
+	}
+}

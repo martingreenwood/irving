@@ -1,0 +1,85 @@
+// Typography
+$base-font-family: 'Lato', sans-serif;
+$heading-font-family: 'EuphemiaUCAS', sans-serif;
+$font-pre: $monospace;
+$font-code: $font-pre;
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Line height
+$base-line-height: 1.625;
+$pre-line-height: $base-line-height;
+$heading-line-height: $base-line-height;
+$line-height-pre: $base-line-height;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$brand-primary: #282780;
+$brand-secondary: #278028;
+$text-color: #878787;
+$text-screen: $text-color;
+$text-input: $text-color;
+
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+$color-link: $brand-primary;
+$link-hover: $brand-primary;
+$link-visited: $brand-primary;
+
+// Backgrounds
+$background-color: #ffffff;
+$background-hr: $dark-gray;
+$background-button: transparent;
+$background-screen: $light-gray;
+$background-pre: $light-gray;
+$background-ins: $light-gray;
+$background-mark: $light-gray;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $brand-primary;
+
+// Border
+$base-border-color: $dark-gray;
+$base-border: 1px solid $base-border-color;
+$border-input: $light-gray;
+$border-abbr: $light-gray;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 300ms;
+$base-timing: ease-in-out;
+$base-transition: $base-duration $base-timing;
+
+
+// Parallax
+$parallax-window-height: 350px;
+$parallax-background-height: $parallax-window-height * 2;
+
+// Flashes
+$flashes: (
+	"alert": #fff6bf,
+	"error": #fbe3e4,
+	"notice": #e5edf8,
+	"success": #e6efc2,
+) !default;
+
+// Star Rating
+$ratingSize: 150px;
+$starActive: escape($brand-primary);
+$starInactive: escape(lighten($brand-primary, 50%));

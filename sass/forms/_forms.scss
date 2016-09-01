@@ -1,0 +1,121 @@
+@import "buttons";
+
+@import "fields";
+
+.gform_wrapper {
+	margin: 0 !important;
+
+	.top_label {
+	
+		input.medium, select.medium {
+			width: 100%;
+		}
+	}
+
+	.gform_fields {
+
+		.gfield {
+			margin: 0 0 20px 0;
+			float: left;
+			width: 100%;
+			clear: none;
+		}
+	}
+
+
+	input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select[multiple=multiple] {
+		border-radius: 0;
+		box-shadow: none;
+		box-sizing: border-box;
+	}
+	
+	.gform_heading {
+		display: none;
+	}
+
+	.field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*="gfield_time_"].ginput_container label {
+		display: none;
+	}
+
+	.top_label li ul.gfield_checkbox, .top_label li ul.gfield_radio {
+		width: 100%;
+	}
+
+	.gfield_checkbox li, .gfield_radio li {
+		display: inline;
+		margin-right: 10px;
+
+		input[type=checkbox], input[type=radio], input {
+			margin-top: 0;
+		}
+	}
+
+	.gfield_checkbox {
+
+		li {
+
+			width: 100%;
+			float: left;
+
+			@include media ($medium-screen-up) {
+				width: 32.3%;
+			}
+
+			label {
+				font-weight: normal;
+			}
+
+			input[type="checkbox"]+label, input[type="radio"]+label {
+				display: table;
+				outline: 0;
+			}
+
+			input:checked + label:before {
+			    background: $brand-primary;
+			    border-color: $brand-primary;
+			    outline: 0;
+			    content: "\f00c";
+			}
+
+			input:focus + label {
+				outline: 0;
+			}
+
+			input:hover + label::before {
+				border-color: $brand-primary;
+			}
+
+			input {
+				opacity: 0;
+				position: absolute; 
+
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+
+				&:checked {
+
+				}
+			}
+			
+			label {
+				 position: relative;
+
+				 &:before {
+					content: '';
+					background-color: #fff;
+					border: 2px solid #ddd;
+					display: inline-block;
+					vertical-align: middle;
+					width: 20px;
+					height: 20px;
+					padding: 2px;
+					margin-right: 10px;
+					text-align: center;
+					font: normal normal normal 13px/1 FontAwesome;
+					color: white;
+				 }
+			}
+		}
+	}
+}
