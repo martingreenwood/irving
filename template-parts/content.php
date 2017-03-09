@@ -21,12 +21,10 @@
 		</div>
 	<?php endif; ?>	
 
-	<div class="entry-sidebar">
+	<div class="entry-sidebar" data-state="<?php echo get_field('show_status'); ?>">
 
 		<aside>
-		<?php if (get_field('show_status') == "rehearsal-stage" || get_field('show_status') == "auditioning"): ?>
-			<p class="info"><?php the_field('information'); ?></p>
-		<?php elseif(get_field('show_status') == "taking-bookings"): ?>
+		<?php if(get_field('show_status') == "upcoming"): ?>
 			<?php
 			if( have_rows('dates') ):
 				while( have_rows('dates') ): the_row(); 
@@ -44,6 +42,18 @@
 					<hr>
 					<p><strong>Venue</strong></p>
 					<p class="addr"><?php echo $venue; ?></p>
+				<?php	
+				endwhile;
+			endif; ?>
+		<?php elseif(get_field('show_status') == "on-sale-soon"): ?>
+			<?php
+			if( have_rows('dates') ):
+				while( have_rows('dates') ): the_row();
+					$start_date = get_sub_field('start_date');
+					$end_date = get_sub_field('end_date');
+					?>
+					<p><strong>Performing</strong></p>
+					<p><strong><?php echo date("d M", strtotime($start_date)); ?> - <?php echo date("d M", strtotime($end_date)); ?> <?php echo date("Y", strtotime($end_date)); ?></strong></p>
 				<?php	
 				endwhile;
 			endif; ?>

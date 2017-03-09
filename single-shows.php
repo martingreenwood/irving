@@ -18,7 +18,7 @@ get_header(); ?>
 					<div class="container">
 						<h1><?php the_title(); ?></h1>
 
-						<?php if(get_field('show_status') == "taking-bookings"): ?>
+						<?php if(get_field('show_status') == "upcoming"): ?>
 							<?php
 							if( have_rows('dates') ):
 								while( have_rows('dates') ): the_row(); 
@@ -88,9 +88,11 @@ get_header(); ?>
 			?>
 			<div class="review">
 				<?php echo $review_text; ?>
+				<?php if ($review_rating): ?>
 				<div class="star-rating">
 					<span style="width:<?php echo $review_rating; ?>"></span>
 				</div>
+				<?php endif; ?>
 				<small><?php echo $review_name; ?></small>
 			</div>
 			<?php	

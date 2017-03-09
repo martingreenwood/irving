@@ -28,20 +28,8 @@ $cpts = array(
 		'dashicons-tickets-alt', 
 		array('title','editor','thumbnail'),
 		true,
-	),
-	
-	// Committee
-	array(
-		'committee',
-		'Committee',
-		'Committee',
-		'dashicons-groups', 
-		array('title','editor','thumbnail'),
-		true,
-	),
-	
+	),	
 );
-
 
 function cpts_register() {
 	
